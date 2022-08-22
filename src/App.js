@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import ClassComponent from "./components/ClassComponent";
+import FunctionalComponent from "./components/FunctionalComponent";
+import WithProp from "./components/WithProp";
+import WithChildrenProp from "./components/WithChildrenProp";
+import WithState from "./components/WithState";
+import StateMergeExample from "./components/StateMergeExample";
+import IncrementExample from "./components/IncrementExample";
+import Parent from "./components/PassingDataUp/Parent";
+import ConditionalRendering from "./components/ConditionalRendering";
+import ListRendering from "./components/ListRendering";
+import CssModulesExample from "./components/CssModulesExample/CssModulesExample";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FunctionalComponent></FunctionalComponent>
+      <ClassComponent></ClassComponent>
+      <WithProp name={"Ali"}></WithProp>
+      <WithChildrenProp>{"Ahmed"}</WithChildrenProp>
+      <WithState></WithState>
+      <StateMergeExample></StateMergeExample>
+      <IncrementExample></IncrementExample>
+      <Parent></Parent>
+      <ConditionalRendering></ConditionalRendering>
+      <ListRendering></ListRendering>
+      <CssModulesExample></CssModulesExample>
     </div>
   );
 }
